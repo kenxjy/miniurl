@@ -36,6 +36,7 @@ testem.log
 .runtimeconfig.json
 .serviceAccount.json
 /.firebase
+.firebaserc
 
 # System Files
 .DS_Store
