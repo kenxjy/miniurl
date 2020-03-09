@@ -5,7 +5,9 @@
   >
     <span class="long-url">{{ url.longUrl }}</span>
     <span class="spacer"></span>
-    <a [href]="getMiniURL(url.id)" class="mini-url">{{ getMiniURL(url.id) }}</a>
+    <a [href]="getMiniURL(url.id)" class="mini-url" target="_blank">{{
+      getMiniURL(url.id)
+    }}</a>
     <button mat-raised-button color="primary" (click)="copyURL(url.id)">
       Copy
     </button>
