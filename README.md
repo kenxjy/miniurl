@@ -8,3 +8,4 @@ TODO:
 
 - Write some unit tests
 - Make UI more mobile friendly
+- Create proper 404 page
