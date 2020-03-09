@@ -21,7 +21,10 @@ export class MiniUrlListComponent implements OnInit {
 
   copyURL(id: string) {
     navigator.clipboard.writeText(environment.baseURL + id).then(() => {
-      this.snackBar.open('Copied to clipboard!', null, { duration: 2000 });
+      this.snackBar.open('Copied to clipboard!', null, {
+        duration: 2000,
+        verticalPosition: 'top'
+      });
     });
   }
 }
