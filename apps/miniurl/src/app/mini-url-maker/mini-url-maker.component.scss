@@ -1,0 +1,19 @@
+:host {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  margin-top: 1rem;
+
+  .input-field {
+    flex: 1 1 auto;
+  }
+
+  .submit-button {
+    width: 100px;
+    height: 51.25px;
+    margin-top: 0.25rem;
+    margin-left: 1rem;
+  }
+}

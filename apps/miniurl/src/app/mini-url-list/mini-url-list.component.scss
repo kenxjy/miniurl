@@ -1,0 +1,17 @@
+.spacer {
+  flex: 1 1 auto;
+}
+.long-url {
+  max-width: 55%;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.list-item {
+  font-size: 12px;
+}
+
+.mini-url {
+  margin-right: 1rem;
+}

@@ -1,0 +1,33 @@
+{
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
+  "functions": {
+    "predeploy": ["ng lint functions", "ng build functions --prod"],
+    "source": "/"
+  },
+  "hosting": {
+    "predeploy": ["ng build --prod"],
+    "public": "dist/apps/miniurl",
+    "site": "miniurl",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [
+      {
+        "source": "/*",
+        "function": "miniUrlApp"
+      }
+    ]
+  },
+  "emulators": {
+    "functions": {
+      "port": 5001
+    },
+    "firestore": {
+      "port": 8080
+    },
+    "hosting": {
+      "port": 5000
+    }
+  }
+}

@@ -1,0 +1,33 @@
+<div class="row">
+  <mat-form-field class="input-field" appearance="outline">
+    <mat-label>URL to shorten</mat-label>
+    <input
+      matInput
+      placeholder="URL to shorten"
+      [formControl]="urlToShorten"
+      autocomplete="off"
+    />
+    <mat-error *ngIf="urlToShorten.hasError('invalidUrl')">
+      Invalid Url
+    </mat-error>
+  </mat-form-field>
+  <button
+    *ngIf="!showCopyButton"
+    mat-raised-button
+    [disabled]="urlToShorten.invalid || (pending$ | async)"
+    (click)="shortenURL(urlToShorten.value)"
+    class="submit-button"
+    color="primary"
+  >
+    Shorten
+  </button>
+  <button
+    *ngIf="showCopyButton"
+    mat-raised-button
+    (click)="copyURL()"
+    class="submit-button"
+    color="primary"
+  >
+    Copy
+  </button>
+</div>

@@ -1,0 +1,27 @@
+{
+  "npmScope": "miniurl",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "miniurl": {
+      "tags": []
+    },
+    "miniurl-e2e": {
+      "tags": [],
+      "implicitDependencies": [
+        "miniurl"
+      ]
+    },
+    "functions": {
+      "tags": []
+    }
+  }
+}

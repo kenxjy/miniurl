@@ -1,0 +1,14 @@
+MiniURL is a URL shortening service.
+
+<miniurl-mini-url-maker></miniurl-mini-url-maker>
+
+<mat-card class="recent-list">
+  <mat-card-header>
+    <mat-card-title>Recently generated URLs</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <miniurl-mini-url-list
+      [dataSource]="recentMiniUrls$ | async"
+    ></miniurl-mini-url-list>
+  </mat-card-content>
+</mat-card>

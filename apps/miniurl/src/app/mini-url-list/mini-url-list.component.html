@@ -1,0 +1,14 @@
+<mat-list *ngIf="dataSource">
+  <mat-list-item
+    *ngFor="let url of dataSource; let isLast = last"
+    class="list-item"
+  >
+    <span class="long-url">{{ url.longUrl }}</span>
+    <span class="spacer"></span>
+    <a [href]="getMiniURL(url.id)" class="mini-url">{{ getMiniURL(url.id) }}</a>
+    <button mat-raised-button color="primary" (click)="copyURL(url.id)">
+      Copy
+    </button>
+    <mat-divider *ngIf="!isLast"></mat-divider>
+  </mat-list-item>
+</mat-list>
